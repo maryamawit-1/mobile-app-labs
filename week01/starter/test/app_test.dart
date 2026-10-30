@@ -3,15 +3,16 @@
 
 import 'package:flutter_test/flutter_test.dart';
 
-import 'package:campus_companion/main.dart';
+import 'package:campus_companion/app.dart';
 
 void main() {
   testWidgets('app renders the home screen', (tester) async {
-    await tester.pumpWidget(const MainApp());
+    await tester.pumpWidget(const CampusCompanionApp());
 
     // TODO(lab): once you have created CampusCompanionApp in lib/app.dart,
     // import it, pump it instead of MainApp, and expect the AppBar title
     // 'Campus Companion' and the welcome text.
-    expect(find.text('Hello World!'), findsOneWidget);
+    expect(find.text('Campus Companion'), findsOneWidget);
+    expect(find.text('Welcome to Campus Companion'), findsOneWidget);
   });
 }

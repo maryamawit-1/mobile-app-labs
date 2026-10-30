@@ -40,6 +40,9 @@ void main() {
     // test here for a value exactly on a boundary (for example 25.0).
     // Run it and watch it fail. Show the failing test to the TA at
     // Checkpoint B, then make it pass.
+    test('classifies BMI exactly at the boundary of 25 as Overweight', (){
+      expect(bmiCategory(25.0), 'Overweight');
+    });
   });
 
   group('isPalindrome', () {
